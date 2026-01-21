@@ -1,0 +1,120 @@
+/* Wrapper for centering */
+.otp-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 40px 80px;
+  box-sizing: border-box;
+}
+
+/* Container */
+.otp-container {
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  background: transparent; /* no background block */
+  border-radius: 20px;
+  z-index: 1;
+}
+
+/* Heading */
+.otp-container h2 {
+  color: #f734e5;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* OTP Inputs */
+.otp-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.otp-inputs input {
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 1px solid #555;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  color: white;
+  outline: none;
+  transition: 0.3s;
+}
+
+.otp-inputs input:focus {
+  border-color: #f734e5;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Verify Button */
+.otp-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  background: linear-gradient(354.17deg, #7129FF 3.91%, #FD00E3 72.59%);
+  color: white;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.otp-btn:hover {
+  opacity: 0.85;
+}
+
+/* Resend Section */
+.resend-section {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 20px;
+}
+
+.resend-section button {
+  background: none;
+  border: none;
+  color: #f734e5;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.resend-section button:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 599px) {
+  .otp-wrapper {
+    padding: 20px;
+    height: auto;
+  }
+
+  .otp-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .otp-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .otp-inputs input {
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+  }
+
+  .otp-btn {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+}

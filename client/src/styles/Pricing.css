@@ -1,0 +1,632 @@
+
+
+/* Main container */
+.pricing-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 90vh;
+  bottom: 100px;
+  /* z-index: 1; */
+  padding: 0px 60px;
+  background-color: linear-gradient(90deg, #1c0c3f 0%, #0f0f2f 100%);
+  /* width: 100%; */
+  /* margin: auto; */
+  /* background: linear-gradient(90deg, #1c0c3f 0%, #0f0f2f 100%); */
+  box-sizing: border-box;
+  background-image: url('../assets/desktop.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex-wrap: wrap;
+}
+
+.pricing-logo1 {
+  margin-left: 100px;
+  height: auto;
+  width: 50%;
+}
+
+
+
+
+.pricing-left {
+  flex: 1;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  max-width: 50%;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.pricing-left h1 {
+  font-size: 3.3rem;
+  font-weight: 600;
+  line-height: 1.3;
+  padding-left: 40px;
+}
+
+.pricing-left p {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 500px;
+  color: gray;
+  margin-left: 40px;
+}
+
+
+/* Right section styling */
+.pricing-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.pricing-right img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Move both left and right content up */
+.pricing-left {
+  transform: translateY(10px);
+}
+
+.pricing-right {
+  transform: translateY(-20px);
+}
+
+/* LinkedIn image - left bottom corner of the paragraph */
+.pricing-left {
+  position: relative;
+}
+
+.pricing-left img {
+  position: absolute;
+  bottom: -10px;
+  /* left: 10px; */
+  width: 40px;
+  height: 40px;
+}
+
+/* Ensure the container allows absolute positioning inside */
+/* Make the container relative for absolute positioning */
+.pricing-container {
+  position: relative;
+}
+
+/* LinkedIn image - move more up and to the left */
+.pricing-left {
+  position: relative;
+}
+
+.pricing-left img {
+  position: absolute;
+  top: 50%;
+  /* higher up */
+  left: -18px;
+  /* more to the left */
+  width: 35px;
+  height: 35px;
+  margin-top: 0;
+}
+
+/* Instagram image - top-right of the Hero image */
+.pricing-right .insta {
+  position: absolute;
+  top: 100px;
+  right: -30px;
+  width: 35px;
+  height: 35px;
+}
+
+/* Snap image - move even further down */
+.pricing-container>img:last-of-type {
+  position: absolute;
+  bottom: -30px;
+  /* pushed further below */
+  left: 60%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+}
+
+/* ===== Responsive Icon Positioning ===== */
+
+/* Default - already applied for larger screens */
+.pricing-left img {
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  width: 35px;
+  height: 35px;
+  margin-top: 0;
+}
+
+.pricing-right .insta  {
+  position: absolute;
+  top: 124px;
+  right: -3px;
+  width: 35px;
+  height: 35px;
+
+}
+
+.pricing-container>img:last-of-type {
+  position: absolute;
+  bottom: -100px;
+  left: 60%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+}
+
+
+/* Tablet screens (≤ 1024px) */
+@media (max-width: 1024px) {
+
+  .pricing-left img {
+    top: 60%;
+    left: -45px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .pricing-right .insta {
+    top: 90px;
+    right: -20px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .pricing-container>img:last-of-type {
+    bottom: -20px;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Medium screens (≤ 768px) */
+@media (max-width: 768px) {
+  .pricing-left img {
+    top: 75%;
+    left: -25px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .pricing-right .insta {
+   top: -225px;
+    right: 3px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .pricing-container>img:last-of-type {
+    bottom: -10px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* Small screens (≤ 480px) */
+@media (max-width: 480px) {
+  .pricing-container {
+     flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 60px;
+    background-image: url('../assets/mobile.png');
+    background-repeat: no-repeat;
+    background-position: 0px 30px;
+    min-height: 80vh;
+    max-width: 98%;
+    margin: auto;
+    width: 92%;
+  }
+
+  .pricing-logo1 {
+    margin: 50px 0px 10px 35px;
+    max-width: 120px;
+  }
+
+  .pricing-left {
+    width: 100%;
+    /* padding: 60px 0px 0px; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    text-align: left;
+  }
+
+  .pricing-left h1 {
+    font-size: 2rem;
+    /* margin-top: 50px; */
+    /* margin-right: 30px; */
+    margin-bottom: 25px;
+    line-height: 1.3;
+    text-align: left;
+    padding-left: 0;
+    font-weight: 900;
+  }
+
+  .pricing-left p {
+    text-align: left;
+    font-size: 0.95rem;
+    margin: 0 0 15px 0;
+    line-height: 1.5;
+    max-width: 100%;
+  }
+
+
+  .pricing-right {
+    /* margin-top: 20px; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20x;
+  }
+
+  .pricing-right img {
+    max-width: 100%;
+    height: auto;
+    /* bottom: ; */
+  }
+
+  .pricing-left img {
+    top: auto;
+    bottom: 10px;
+    left: 55px;
+    width: 22px;
+    height: 22px;
+  }
+
+  .pricing-left .insta {
+
+    top: -430px;
+    right: 0;
+    width: 28px;
+    height: 28px;
+  }
+
+  .pricing-container>img:last-of-type {
+        bottom: 360px;
+        width: 22px;
+        left: 315px;
+        height: 22px;
+  }
+}
+
+/* Responsive for tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+  .pricing-container {
+    flex-direction: column;
+    padding: 40px 30px;
+  }
+
+  .pricing-left,
+  .pricing-right {
+    max-width: 100%;
+    transform: none;
+    text-align: center;
+  }
+
+  .pricing-left h1 {
+    font-size: 2.5rem;
+  }
+
+  .pricing-left p {
+    font-size: 1rem;
+  }
+
+  .pricing-right img {
+    width: 90%;
+  }
+}
+
+/* Responsive for mobile (up to 768px) */
+@media (max-width: 768px) {
+  .pricing-container {
+    padding: 130px 20px;
+  }
+
+  .pricing-left h1 {
+    font-size: 2rem;
+  }
+
+  .pricing-left p {
+    font-size: 0.95rem;
+  }
+
+  .pricing-right img {
+    width: 80%;
+  }
+
+  .pricing-left button {
+    width: 100%;
+  }
+}
+
+/* Optional: tiny screen support (up to 480px) */
+@media (max-width: 480px) {
+  .pricing-left h1 {
+    font-size: 2rem;
+  }
+
+  .pricing-left p {
+    font-size: 0.9rem;
+  }
+
+  .pricing-right img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+
+.pricing-section {
+  padding: 0px 20px 0px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  bottom: 50px;
+}
+
+.pricing-section h1 {
+  font-size: 3.2rem;
+  line-height: 1.3;
+  color: #cccccc;
+  margin-bottom: 40px;
+}
+
+.pricing-section p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 100px;
+  max-width: 1100px;
+  line-height: 1.6;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.pricing-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 280px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  text-align: left;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.pricing-card:hover {
+  transform: scale(1.03);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.pricing-card.active {
+  border: 2px solid transparent;
+  border-image: linear-gradient(354.17deg, #7129FF 3.91%, #FD00E3 72.59%);
+  border-image-slice: 1;
+  box-shadow: 0 0 15px rgba(255, 0, 204, 0.4);
+}
+
+.pricing-card h2 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.price span {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+.price hr {
+  height: 1px;
+  color: gray;
+}
+
+.pricing-card p {
+  color: #aaa;
+  margin-bottom: 40px;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  line-height: 2;
+  margin-bottom: 70px;
+}
+
+.pricing-card ul li {
+  margin: 8px 0;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.primary-btn,
+.outline-btn {
+  padding: 20px;
+  border-radius: 3px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+.primary-btn {
+  background: linear-gradient(354.17deg, #7129FF 3.91%, #FD00E3 72.59%);
+  color: #fff;
+}
+
+.outline-btn {
+  background: transparent;
+  border: 2px solid transparent;
+  border-image: linear-gradient(354.17deg, #7129FF 3.91%, #FD00E3 72.59%);
+  border-image-slice: 1;
+  color: #ccc;
+}
+
+.outline-btn:hover {
+  color: #fff;
+}
+
+/* ============== RESPONSIVE MEDIA QUERIES ============== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .pricing-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .pricing-section p {
+    font-size: 1rem;
+    margin-bottom: 80px;
+  }
+
+  .pricing-card {
+    width: 45%;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-card {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .pricing-card h2 {
+    font-size: 1rem;
+  }
+
+  .price {
+    font-size: 2.5rem;
+  }
+
+  .primary-btn,
+  .outline-btn {
+    padding: 16px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Small Devices (Phones) */
+@media (max-width: 480px) {
+  .pricing-section h1 {
+    font-size: 2rem;
+  }
+
+  .pricing-section p {
+    font-size: 0.95rem;
+  }
+
+  .pricing-card {
+    width: 80%;
+  }
+
+  .price {
+    font-size: 2rem;
+  }
+
+  .pricing-card ul li {
+    font-size: 0.85rem;
+  }
+}
+.slider-container {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  margin: 100px auto;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  background: #222;
+  border-radius: 5px;
+  outline: none;
+  position: relative;
+  z-index: 2;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid #f0f;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  box-shadow: 0 0 0 4px rgba(255, 0, 255, 0.3);
+}
+
+.slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid #f0f;
+  cursor: pointer;
+  box-shadow: 0 0 0 4px rgba(255, 0, 255, 0.3);
+}
+
+.slider-progress {
+  height: 8px;
+  background: linear-gradient(to right, #ff00ff, #7129ff);
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.tooltip {
+  position: absolute;
+  top: -35px;
+  background: #111;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+} 

@@ -1,0 +1,575 @@
+
+
+/* Main container */
+.services-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 90vh;
+  bottom: 100px;
+  z-index: 1;
+  padding: 0px 60px;
+  background-color: linear-gradient(90deg, #1c0c3f 0%, #0f0f2f 100%);
+  /* width: 100%; */
+  /* margin: auto; */
+  /* background: linear-gradient(90deg, #1c0c3f 0%, #0f0f2f 100%); */
+  box-sizing: border-box;
+  background-image: url('../assets/desktop.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex-wrap: wrap;
+}
+
+.services-logo1 {
+  margin-left: 100px;
+  /* margin-bottom: 10px; */
+}
+
+
+.red2{
+   width: 100%;
+  height: 150vh;
+  position: absolute;
+  top: 230% !important;
+  opacity: 1;
+  left: 0px !important;
+}
+
+.services-left {
+  flex: 1;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  max-width: 50%;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.services-left h1 {
+  font-size: 3.3rem;
+  font-weight: 600;
+  padding-left: 40px;
+  line-height: 1.3;
+}
+
+.services-left p {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 500px;
+  color: gray;
+  margin-left: 40px;
+  margin-top: 40px;
+}
+
+
+/* Right section styling */
+.services-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.services-right img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Move both left and right content up */
+.services-left {
+  transform: translateY(10px);
+}
+
+.services-right {
+  transform: translateY(-20px);
+}
+
+/* LinkedIn image - left bottom corner of the paragraph */
+.services-left {
+  position: relative;
+}
+
+.services-left img {
+  position: absolute;
+  bottom: -10px;
+  /* left: 10px; */
+  width: 40px;
+  height: 40px;
+}
+
+/* Ensure the container allows absolute positioning inside */
+/* Make the container relative for absolute positioning */
+.services-container {
+  position: relative;
+}
+
+/* LinkedIn image - move more up and to the left */
+.services-left {
+  position: relative;
+}
+
+.services-left img {
+  position: absolute;
+  top: 50%;
+  /* higher up */
+  left: -18px;
+  /* more to the left */
+  width: 35px;
+  height: 35px;
+  margin-top: 0;
+}
+
+/* Instagram image - top-right of the Hero image */
+.services-right .insta {
+  position: absolute;
+  top: 100px;
+  right: -30px;
+  width: 35px;
+  height: 35px;
+}
+
+/* Snap image - move even further down */
+.services-container>img:last-of-type {
+  position: absolute;
+  bottom: -30px;
+  /* pushed further below */
+  left: 60%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+}
+
+/* ===== Responsive Icon Positioning ===== */
+
+/* Default - already applied for larger screens */
+.services-left img {
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  width: 35px;
+  height: 35px;
+  margin-top: 0;
+}
+
+.services-right .insta  {
+  position: absolute;
+  top: 124px;
+  right: -3px;
+  width: 35px;
+  height: 35px;
+
+}
+
+.services-container>img:last-of-type {
+  position: absolute;
+  bottom: -100px;
+  left: 60%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+}
+
+.ball3 {
+    
+    right: 1220px;
+    display: inline-block;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 450%;
+}
+
+.ball4 {
+
+    right: 1130px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 468%;
+
+}
+/* Tablet screens (≤ 1024px) */
+@media (max-width: 1024px) {
+
+      .services-container{
+    background-image: url('../assets/desktop.png');
+    background-position: 30px 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .red2{
+    display: none;
+  }
+
+  .services-left img {
+    top: 60%;
+    left: -45px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .services-right .insta {
+    top: 90px;
+    right: -20px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .services-container>img:last-of-type {
+    bottom: -20px;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Medium screens (≤ 768px) */
+@media (max-width: 768px) {
+  .services-left img {
+    top: 75%;
+    left: -25px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .services-right .insta {
+    top: -260px;
+    right: 1px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .services-container>img:last-of-type {
+    bottom: -10px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* Small screens (≤ 480px) */
+@media (max-width: 480px) {
+  .services-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 60px;
+    background-image: url('../assets/mobile.png');
+    background-repeat: no-repeat;
+    background-position: 0px 20px;
+    min-height: 80vh;
+    max-width: 98%;
+    margin: auto;
+    width: 92%;
+
+  }
+  .ball3 {
+    
+     position: relative;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    top: 790px;
+}
+
+.ball4 {
+
+   position: relative;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+    top: 910px;
+
+}
+    .boxes{
+    position: absolute;
+    top: 0;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+  .services-logo1 {
+    margin: 50px 0px 10px 35px;
+    max-width: 100px;
+  }
+
+  .services-left {
+    width: 100%;
+    /* padding: 60px 0px 0px; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    text-align: left;
+  }
+
+  .services-left h1 {
+    /* font-size: 2rem; */
+    /* margin-top: 50px; */
+    /* margin-right: 30px; */
+    margin-bottom: 25px;
+    line-height: 1.3;
+    text-align: left;
+    padding-left: 0;
+  }
+
+  .services-left p {
+    text-align: left;
+    font-size: 0.95rem;
+    margin: 0 0 15px 0;
+    line-height: 1.8;
+    max-width: 88%;
+  }
+
+  .left .buttonss {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    /* horizontal buttons */
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .left .get-started {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  .services-right {
+    /* margin-top: 20px; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20x;
+  }
+
+  .services-right img {
+    max-width: 100%;
+    height: auto;
+    /* bottom: ; */
+  }
+
+  .services-left img {
+    top: auto;
+    bottom: 10px;
+    left: 55px;
+    width: 22px;
+    height: 22px;
+  }
+
+  .services-left .insta {
+
+    top: -430px;
+    right: 0;
+    width: 28px;
+    height: 28px;
+  }
+
+  .services-container>img:last-of-type {
+        bottom: 360px;
+        width: 22px;
+        left: 315px;
+        height: 22px;
+  }
+}
+
+/* Responsive for tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+  .services-logo1{
+    margin-left: 60px;
+  }
+  .services-container {
+        flex-direction: row;
+        padding: 40px 30px;
+        min-height: 0px;
+  }
+
+  .services-left,
+  .services-right {
+    max-width: 100%;
+    transform: none;
+    text-align: left;
+  }
+
+  .services-left h1 {
+    font-size: 2.5rem;
+    /* margin-top: 160px; */
+  }
+
+  .services-left p {
+    font-size: 1rem;
+    max-width: 1000px;
+    
+  }
+
+  .sercices-right img {
+    width: 90%;
+  }
+}
+
+/* Responsive for mobile (up to 768px) */
+@media (max-width: 768px) {
+  .services-container {
+    padding: 130px 20px;
+  }
+
+  .services-left h1 {
+    font-size: 2rem;
+  }
+
+  .services-left p {
+    font-size: 0.95rem;
+  }
+
+  .services-right img {
+    width: 80%;
+  }
+
+  .services-left button {
+    width: 100%;
+  }
+}
+
+/* Optional: tiny screen support (up to 480px) */
+@media (max-width: 480px) {
+
+  .services-container{
+    flex-direction: column;
+    min-height: 90vh;
+  }
+  .services-left h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-top: 0px;
+  }
+
+  .services-left p {
+    font-size: 0.9rem;
+    max-width: -1000px;
+    /* margin-left: px; */
+  }
+
+  .services-right img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.services-section3 {
+  padding: 60px 20px 150px;
+  text-align: center;
+}
+
+.services-content {
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+  padding: 0 15px;
+}
+
+.services-content h1 {
+  font-size: 3.2rem;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  color: #cccccc;
+  z-index: 1;
+}
+
+.services-content p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 100px;
+  z-index: 1;
+}
+
+.servicescards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 0 15px;
+  z-index: 1;
+}
+
+.services-cards {
+  border-radius: 1px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 300px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: left;
+  cursor: pointer;
+}
+
+
+
+.services-cards:hover {
+  transform: translateY(-5px);
+}
+.services-cards .image img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 15px;
+}
+
+
+.services-cards h1 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #cccccc;
+}
+
+.services-cards p {
+  font-size: 0.95rem;
+  color: gray;
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+  .services-cards {
+    flex: 1 1 calc(33.33% - 30px);
+  }
+}
+
+/* Medium screens */
+@media (max-width: 1024px) {
+  .services-cards {
+    flex: 1 1 calc(45% - 30px);
+  }
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+    .services-section3 {
+    padding: 0px 20px;
+    text-align: center;
+    position: relative;
+    bottom: 50px;
+}
+.services-cards h1{
+  font-size: 1rem;
+}
+.services-cards p{
+  font-size: 0.75rem;
+}
+  .services-content h1 {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+  }
+
+  .services-content p {
+    font-size: 0.875rem;
+    margin-bottom: 0px;
+    /* text-align:start; */
+  }
+  .services-cards {
+    flex: 1 1 100%;
+  }
+}

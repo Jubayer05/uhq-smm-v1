@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=fallback');
+@import 'tailwindcss';
+@import './additional-styles/utility-patterns.css' layer(components);
+
+@plugin "@tailwindcss/forms" {
+  strategy: base;
+}
+
+@custom-variant dark (&:is(.dark *));
+@custom-variant sidebar-expanded (&:is(.sidebar-expanded *));
+
+@theme {
+  --shadow-sm: 0 1px 1px 0 rgb(0 0 0 / 0.05), 0 1px 2px 0 rgb(0 0 0 / 0.02);
+
+  /* Custom Colors */
+  --color-dark-violet: #22213B;
+  --color-dark-blue: #1e3a8a;
+
+  /* Add the custom color here */
+  --color-dark-rgba: rgba(28, 25, 42, 1);
+
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #bfc4cd;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+  --color-gray-950: #030712;
+
+  /* Other colors and font settings */
+  --font-inter: "Inter", "sans-serif";
+}
+
+@layer base {
+  /* Default border color for light mode */
+  * {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
+  /* Dark mode overrides */
+  .dark {
+    background-color: var(--color-dark-rgba); /* Using rgba color here */
+    color: white;
+  }
+  .dark .gradient-border {
+  border: 1px solid;
+  border-radius: 32px;
+  border-image: linear-gradient(354.17deg, #7129FF 3.91%, #FD00E3 72.59%) 1;
+}
+}

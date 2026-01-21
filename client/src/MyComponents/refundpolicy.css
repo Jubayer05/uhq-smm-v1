@@ -1,0 +1,77 @@
+/* RefundPolicy.css */
+
+.refund-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid #f734e5;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  font-family: 'Poppins', sans-serif;
+  color: #ccc;
+  line-height: 1.8;
+  box-sizing: border-box;
+}
+
+.refund-container h1 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  color: #f734e5;
+  text-align: center;
+  border-bottom: 1px solid #f734e5;
+  padding-bottom: 10px;
+}
+
+.refund-container p {
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+}
+
+.refund-container ul {
+  list-style: disc;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.refund-container ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.refund-container strong {
+  color: #f734e5;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .refund-container {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .refund-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .refund-container p,
+  .refund-container ul li {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .refund-container {
+    padding: 15px;
+    margin: 15px;
+  }
+
+  .refund-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .refund-container p,
+  .refund-container ul li {
+    font-size: 0.9rem;
+  }
+}

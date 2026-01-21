@@ -1,0 +1,285 @@
+.footer-image {
+    background-image: url('../assets/footerlayer.png');
+    background-size: 92% 86%;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+}
+
+.footer-container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 140px 100px 30px 120px;
+    color: #ffffff;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+
+/* Main content area (logo + links) */
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+    z-index: 1;
+}
+
+/* Left side: logo and tagline */
+.logo {
+    max-width: 200px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.footer-container p {
+    font-size: 1rem;
+    color: #cccccc;
+    margin-top: 10px;
+    z-index: 1;
+}
+
+/* Right side: links and contact sections */
+.links {
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
+}
+
+.links div {
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.links li {
+    list-style: none;
+    margin-bottom: 8px;
+}
+
+.links a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 0.9rem;
+}
+
+.links a:hover {
+    color: #ffffff;
+}
+
+/* Contact Section */
+.links p {
+    margin: 10px 0 5px;
+    font-size: 1rem;
+}
+
+/* Social Icons */
+.soical-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.soical-links img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.soical-links img:hover {
+    transform: scale(1.1);
+}
+
+/* Copyright */
+.copyright {
+    width: 100%;
+    text-align: right;
+    color: white;
+    margin-left: 50px;
+    z-index: 1;
+}
+
+.copyright .copy-para {
+    font-size: 0.82rem;
+}
+
+
+
+/* Tablet View (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .footer-container {
+        padding: 60px 90px;
+    }
+
+    .logo img {
+        height: 28px;
+    }
+
+    .links div {
+        font-size: 1.2rem;
+    }
+
+    .links a {
+        font-size: 1rem;
+    }
+
+    .soical-links img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .copyright {
+        text-align: right;
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile View (max-width: 768px) */
+@media (max-width: 768px) {
+    .footer-container {
+        padding: 125px 20px 0px;
+    }
+    .footer-image{
+    background-image: url('../assets/footerlayer.png');
+    background-size: 100% 86%;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+    }
+    .logo img {
+        height: 24px;
+    }
+
+    .links div {
+        font-size: 1rem;
+    }
+
+    .links a {
+        font-size: 0.95rem;
+    }
+
+    .soical-links img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .copyright {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    .footer-content {
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .footer-image {
+        /* background-size: 0% 0%; */
+        padding: 0px 20px;
+        background-image: url('../assets/footergroup.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 85%;
+        margin: auto;
+        min-height: 90vh;
+    }
+
+    .logo img {
+        height: 35px;
+    }
+
+    .footer-container p {
+        font-size: 1rem;
+    }
+
+    .links p {
+        font-size: 0.8rem;
+        /* margin-top: 2px; */
+    }
+
+    .links div {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .links a {
+        font-size: 0.75rem;
+    }
+
+    .soical-links img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .copyright {
+        margin-left: 0;
+    }
+
+    .copyright .copy-para {
+        font-size: 0.85rem;
+    }
+
+}
+
+/* Responsive for ball3 and ball4 */
+
+/* Tablet View (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .ball3 {
+        right: 600px;
+        top: 2200%;
+        width: 30px;
+        height: 30px;
+    }
+
+    .ball4 {
+        right: 550px;
+        top: 2220%;
+        width: 15px;
+        height: 15px;
+    }
+}
+
+/* Mobile View (max-width: 768px) */
+@media (max-width: 768px) {
+    .ball3 {
+        right: 710px;
+        top: 875%;
+        width: 25px;
+        height: 25px;
+    }
+
+    .ball4 {
+        right: 640px;
+        top: 880%;
+        width: 12px;
+        height: 12px;
+    }
+}
+
+/* Small Mobile View (max-width: 480px) */
+@media (max-width: 480px) {
+    .ball3 {
+        right: 400px;
+        top: 960%;
+        width: 20px;
+        height: 20px;
+    }
+
+    .ball4 {
+        right: 360px;
+        top: 965%;
+        width: 10px;
+        height: 10px;
+    }
+}
