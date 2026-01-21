@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Sidebar from '../partials/Sidebar';
 import Header from '../partials/Header';
 import Datepicker from '../components/Datepicker';
-import Dummy from '../images/Dummy.jpg';
+import Dummy from '../images/dummy.jpg';
 import Swal from 'sweetalert2';
 import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';

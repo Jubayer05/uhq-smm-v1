@@ -3,7 +3,7 @@ import Sidebar from '../partials/Sidebar';
 import Header from '../partials/Header';
 import { Link, useLocation } from 'react-router-dom';
 import Datepicker from '../components/Datepicker';
-import Dummy from '../images/Dummy.jpg';
+import Dummy from '../images/dummy.jpg';
 import Swal from 'sweetalert2';
 
 
