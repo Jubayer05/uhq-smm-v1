@@ -1,5 +1,7 @@
 {
   "version": 2,
+  "installCommand": "cd server && npm install --ignore-scripts",
+  "buildCommand": "echo 'Server-only deployment - skipping client build'",
   "builds": [
     {
       "src": "server/index.js",
