@@ -61,16 +61,33 @@ if (mongoose.connection.readyState === 0) {
 }
 
 // ✅ CORS
-const allowedOrigins = ['http://localhost:5173', 'https://uhqsmm.temp2026.com', 'https://uhqsmm.com', 'http://uhqsmm.com',  'http://162.217.249.95:4173'];
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://uhqsmm.temp2026.com',
+  'https://uhqsmm.com',
+  'http://uhqsmm.com',
+  'http://162.217.249.95:4173',
+  'https://smmversionv1.vercel.app',
+  'https://uhq-smm-v1.vercel.app',
+  process.env.CLIENT_URL
+].filter(Boolean); // Remove undefined values
+
 app.use(cors({
   origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    
+    if (allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
+      // Log for debugging
+      console.log('CORS blocked origin:', origin);
       callback(new Error('Not allowed by CORS'));
     }
   },
   credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
 }));
 
 // ✅ Stripe Webhook raw parser
