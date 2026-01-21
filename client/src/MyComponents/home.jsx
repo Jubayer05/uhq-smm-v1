@@ -1,7 +1,7 @@
 
 import React from 'react'
 import HeroImage from '../assets/heroImage.png'
-import HeroImage1 from '../assets/heroImage1.png'
+import HeroImage1 from '../assets/HeroImage1.png'
 import Instagram2 from '../assets/ist.png'
 import Snap2 from '../assets/Snap2.png'
 import Linkedin2 from '../assets/linkedin2.png'

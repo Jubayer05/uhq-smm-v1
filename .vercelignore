@@ -1,3 +1,2 @@
+# Only ignore pnpm lockfile to prevent pnpm detection
 client/pnpm-lock.yaml
-client/package.json
-client/
